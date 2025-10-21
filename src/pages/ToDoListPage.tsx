@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ToDo } from '../assets/models/todo-item'
 import { Form } from '../components/form/Form'
-import { Header } from '../components/header/Header'
 import { ToDoList } from '../components/toDoList/ToDoList'
 import { ToastContainer, Zoom, toast } from 'react-toastify'
 
@@ -42,7 +41,6 @@ export const ToDoListPage = () => {
 
   return (
     <>
-      <Header />
       <Form createNewToDo={createNewToDo} />
       <ToDoList todos={todos} updateToDo={updateToDo} deleteToDo={deleteToDo} />
       <ToastContainer 
