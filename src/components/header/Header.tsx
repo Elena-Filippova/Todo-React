@@ -9,8 +9,8 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <NavLink className={getActiveClass} to='/'>Home</NavLink>
-        <NavLink className={getActiveClass} to='/todo'>ToDo</NavLink>
+        <NavLink className={getActiveClass} to='/'>ToDo</NavLink>
+        <NavLink className={getActiveClass} to='/list'>List</NavLink>
       </div>
     </header>
   )
