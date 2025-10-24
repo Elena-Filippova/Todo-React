@@ -1,13 +1,11 @@
-import { Link } from 'react-router-dom'
 import { ToDo } from '../../assets/models/todo-item'
-import styles from './listItem.module.scss'
+import { ListItemLink } from './ListItem.styled'
 
 export const ListItem = ({ todo }: { todo: ToDo}) => {
   return (
-      <Link
-        className={`${styles.link} ${todo.isDone ? styles.done : styles.notDone}`} 
+      <ListItemLink $linkColor={`${todo.isDone ? 'green' : 'red'}`} 
         to={`/list/${todo.id}`}
         rel='noreferrer'
-      >{todo.text}</Link>
+      >{todo.text}</ListItemLink>
   )
 }

@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
 import styles from './header.module.scss'
+import { HeaderBlock, HeaderContainer, HeaderLink } from './Header.styled'
 
 export const Header = () => {
   const getActiveClass = ({ isActive }: {isActive: boolean}): string => {
@@ -7,11 +7,16 @@ export const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <NavLink className={getActiveClass} to='/'>ToDo</NavLink>
-        <NavLink className={getActiveClass} to='/list'>List</NavLink>
-      </div>
-    </header>
+    <HeaderBlock>
+      <HeaderContainer>
+        <HeaderLink 
+          to='/'
+        >ToDo</HeaderLink>
+        <HeaderLink
+
+          to='/list'
+        >List</HeaderLink>
+      </HeaderContainer>
+    </HeaderBlock>
   )
 }
