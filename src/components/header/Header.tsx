@@ -1,10 +1,13 @@
-import styles from './header.module.scss'
-import { HeaderBlock, HeaderContainer, HeaderLink } from './Header.styled'
+import { useDispatch } from 'react-redux'
+import { HeaderBlock, HeaderContainer, HeaderControl, HeaderControls, HeaderLink } from './Header.styled'
+import { toggleThemeAction } from '../../feature/themeList'
 
 export const Header = () => {
-  const getActiveClass = ({ isActive }: {isActive: boolean}): string => {
+  /*const getActiveClass = ({ isActive }: {isActive: boolean}): string => {
     return isActive ? `${styles.active} ${styles.link}` : styles.link
-  }
+  }*/
+
+  const dispatch = useDispatch()
 
   return (
     <HeaderBlock>
@@ -16,6 +19,11 @@ export const Header = () => {
 
           to='/list'
         >List</HeaderLink>
+        <HeaderControls>
+          <HeaderControl onClick={() => dispatch(toggleThemeAction())}>
+            Toggle
+          </HeaderControl>
+        </HeaderControls>
       </HeaderContainer>
     </HeaderBlock>
   )

@@ -53,7 +53,7 @@ export const ToDoItemControl = styled.button<{ icon: string}>`
     content: '';
     width: 1px;
     height: 30px;
-    background: #edf0f1;
+    background-color: #edf0f1; 
 
     position: absolute;
     top: 10px;
